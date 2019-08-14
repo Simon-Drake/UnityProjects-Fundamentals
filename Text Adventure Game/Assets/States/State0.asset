@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7570c5be43d8bc7288af1022506d7375, type: 3}
+  m_Name: State0
+  m_EditorClassIdentifier: 
+  storyText: "You wake up in a prison cell. \n\nDo you pass a cigarette to your cellmate
+    or fight him?"
+  nextStates:
+  - {fileID: 11400000, guid: 9a114db6521dbb0918b1ffa082cada8a, type: 2}
+  - {fileID: 11400000, guid: df067ab71fc6749d39bb72f83a70e51b, type: 2}
