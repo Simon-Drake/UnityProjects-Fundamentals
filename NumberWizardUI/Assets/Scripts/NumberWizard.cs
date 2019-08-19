@@ -6,6 +6,8 @@ public class NumberWizard : MonoBehaviour
 {
 
     int min;
+
+    int test;
     int max;
     int guess;
     // Start is called before the first frame update
