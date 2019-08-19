@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneLoad : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class SceneLoad : MonoBehaviour
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         SceneManager.LoadScene(currentSceneIndex + 1 );
+    }
 
+    public void loadStartScene(){
+        SceneManager.LoadScene(0);
     }
 }
