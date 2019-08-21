@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour{
     [SerializeField] Paddle paddle;
+    [SerializeField] float releaseVectorX = 2f;
+    [SerializeField] float releaseVectorY = 14f;
 
     Vector2 paddleToBall;
 
@@ -24,10 +26,9 @@ public class Ball : MonoBehaviour{
         }
     }
 
-    private void LaunchOnClick()
-    {
+    private void LaunchOnClick(){
         if (Input.GetMouseButtonDown(0)){
-            GetComponent<Rigidbody2D>().velocity = new Vector2(2f, 10f);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(releaseVectorX, releaseVectorY);
             hadStarted = true;
         }
     }
