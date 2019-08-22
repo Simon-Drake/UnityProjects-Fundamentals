@@ -137,11 +137,10 @@ MonoBehaviour:
   releaseVectorX: 2
   releaseVectorY: 14
   ballSounds:
-  - {fileID: 8300000, guid: 27a6163c79ea05b2b950af9faa58c619, type: 3}
   - {fileID: 8300000, guid: f0f56995cb66c17f99777eeda38f35b2, type: 3}
   - {fileID: 8300000, guid: 874b6d0c8530be4d3adf5513bd143758, type: 3}
   - {fileID: 8300000, guid: 9705370fcec7e0c7bac2a22ec64d84df, type: 3}
-  - {fileID: 8300000, guid: 423a2d79e24443897ba6ecb26903e909, type: 3}
+  - {fileID: 8300000, guid: 27a6163c79ea05b2b950af9faa58c619, type: 3}
 --- !u!82 &1517038062
 AudioSource:
   m_ObjectHideFlags: 0
