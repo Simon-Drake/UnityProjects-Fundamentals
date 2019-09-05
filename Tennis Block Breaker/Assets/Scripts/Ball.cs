@@ -23,26 +23,32 @@ public class Ball : MonoBehaviour{
     }
 
     // Update is called once per frame
-
-    void Update(){
+    void Update()
+    {
+        // If the game hasn't started lock ball to paddle. 
         if(!hasStarted){
             LockToPaddle();
             LaunchOnClick();
         }
     }
 
+    // If clicks gam starts
     private void LaunchOnClick(){
-        if (Input.GetMouseButtonDown(0)){
+        if (Input.GetMouseButtonDown(0))
+        {
+            // Initialise velocity
             GetComponent<Rigidbody2D>().velocity = new Vector2(releaseVectorX, releaseVectorY);
             hasStarted = true;
         }
     }
 
+    // Locks ball to paddle
     void LockToPaddle(){
         Vector2 paddlePos = new Vector2(paddle.transform.position.x, paddle.transform.position.y);
         transform.position = paddlePos + paddleToBall;
     }
 
+    // Play random sound if ball hits something.
     private void OnCollisionEnter2D(Collision2D collision){
         if (hasStarted){
             AudioClip clip = ballSounds[UnityEngine.Random.Range(0, ballSounds.Length)];

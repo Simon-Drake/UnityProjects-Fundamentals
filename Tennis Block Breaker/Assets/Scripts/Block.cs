@@ -20,6 +20,10 @@ public class Block : MonoBehaviour{
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+        // Add point to player score. 
+        FindObjectOfType<GameState>().AddToScore();
+        
         // Play sound and update level member variables
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
         Destroy(gameObject);
