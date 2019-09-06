@@ -6718,11 +6718,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block
       objectReference: {fileID: 0}
-    - target: {fileID: 4524559201548913809, guid: 492e638600945df64a788182c7be5647,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4524559201548913903, guid: 492e638600945df64a788182c7be5647,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6777,6 +6772,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4524559201548913901, guid: 492e638600945df64a788182c7be5647,
+        type: 3}
+      propertyPath: blockSparklesVFX
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 492e638600945df64a788182c7be5647, type: 3}

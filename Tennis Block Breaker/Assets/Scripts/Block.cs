@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Block : MonoBehaviour{
 
-    // Configuration
+    // Reference variables
     [SerializeField] AudioClip breakSound;
-
-    // State variables
+    [SerializeField] GameObject blockSparklesVFX;
     Level level;
 
     public void Start()
@@ -24,9 +23,22 @@ public class Block : MonoBehaviour{
         // Add point to player score. 
         FindObjectOfType<GameState>().AddToScore();
         
-        // Play sound and update level member variables
+        // Play sound
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
+
+        // Destroy
         Destroy(gameObject);
         level.BlockDestroyed();
+
+        // Create particle effect
+        TriggerSparkles();
+
+    }
+
+    // Instantiates particle effect prefab
+    private void TriggerSparkles()
+    {
+        GameObject sparkles = Instantiate(blockSparklesVFX, transform.position, transform.rotation);
+        Destroy(sparkles, 1f);
     }
 }
