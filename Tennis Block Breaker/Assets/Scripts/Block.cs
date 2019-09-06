@@ -8,7 +8,6 @@ public class Block : MonoBehaviour{
     // Configuration parameters
     [SerializeField] AudioClip breakSound;
     [SerializeField] GameObject blockSparklesVFX;
-    [SerializeField] int maxHits;
     [SerializeField] Sprite[] hitSprites;
 
     // Cached references
@@ -33,6 +32,7 @@ public class Block : MonoBehaviour{
         if(tag == "Breakable")
         {
             timesHit++;
+            int maxHits = hitSprites.Length + 1;
             if(timesHit >= maxHits){
                 // Add point to player score. 
                 FindObjectOfType<GameState>().AddToScore();
@@ -54,11 +54,18 @@ public class Block : MonoBehaviour{
         }
     }
 
-    // Update sprite to display breakage. 
+    // Update sprite to display breakage.
     private void ShowNextHitSprite()
     {
         int spriteIndex = timesHit - 1;
-        GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
+        if(hitSprites[spriteIndex] != null)
+        {
+            GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
+        }
+        else
+        {
+            Debug.LogError("bad index" + gameObject.name);
+        }
     }
 
     // Instantiates particle effect prefab
