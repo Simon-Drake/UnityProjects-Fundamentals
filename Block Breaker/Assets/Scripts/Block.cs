@@ -61,6 +61,9 @@ public class Block : MonoBehaviour{
         if(hitSprites[spriteIndex] != null)
         {
             GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
+            // transform.localScale = new Vector3(0.4f, 0.4f, 0f);
+            // GetComponent<BoxCollider2D>().size = new Vector2(1.3f,1.3f);
+            // GetComponent<BoxCollider2D>().offset = new Vector2(0.63f, 0.63f);
         }
         else
         {
@@ -72,6 +75,6 @@ public class Block : MonoBehaviour{
     private void TriggerSparkles()
     {
         GameObject sparkles = Instantiate(blockSparklesVFX, transform.position, transform.rotation);
-        Destroy(sparkles, 1f);
+        Destroy(sparkles, 0.3f);
     }
 }

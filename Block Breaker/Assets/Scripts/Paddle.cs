@@ -39,4 +39,8 @@ public class Paddle : MonoBehaviour{
             return Input.mousePosition.x / Screen.width * screenWidthUnits;
         }
     }
+
+    public void ScalePaddle2x(){
+        transform.localScale = new Vector3(2f, 1f, 0f);
+    }
 }

@@ -15,7 +15,7 @@ public class GameState : MonoBehaviour
     [SerializeField] int currentScore = 0;
 
 
-    // UI references
+    // Cached references
     [SerializeField] TextMeshProUGUI scoreText;
 
     void Awake()
@@ -42,7 +42,6 @@ public class GameState : MonoBehaviour
     {
         // Set speed
         Time.timeScale = gameSpeed;
-
     }
 
     // Update score
