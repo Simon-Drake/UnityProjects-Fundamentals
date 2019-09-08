@@ -13,6 +13,7 @@ public class Block : MonoBehaviour{
     // Cached references
     Level level;
 
+
     // State variables 
     [SerializeField] int timesHit; //(serialised for debug)
 
