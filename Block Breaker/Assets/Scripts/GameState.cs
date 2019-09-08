@@ -47,6 +47,18 @@ public class GameState : MonoBehaviour
     {
         currentScore += pointsPerBlockDestroyed;
         scoreText.text = currentScore.ToString();
+        if(currentScore % 10 == 0 )
+        {
+            pointsPerBlockDestroyed *= 2;
+        }
+        if(currentScore % 25 == 0)
+        {
+            pointsPerBlockDestroyed *= 2;
+        }
+        if(currentScore % 100 == 0)
+        {
+            pointsPerBlockDestroyed *= 2;
+        }
     }
 
     // Destroy game state, called when game starts/restarts.

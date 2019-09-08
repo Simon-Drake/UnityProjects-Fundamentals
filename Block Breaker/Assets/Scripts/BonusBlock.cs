@@ -16,6 +16,7 @@ public class BonusBlock : MonoBehaviour
     {
         Deactivate();
         StartCoroutine(Wait());
+        paddle = FindObjectOfType<Paddle>();
     }
 
     // Deactivate relevant components
